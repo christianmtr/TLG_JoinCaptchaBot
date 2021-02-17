@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from os import path as os_path
+from decouple import config
 
 # Actual settings.py full path directory name
 SCRIPT_PATH = os_path.dirname(os_path.realpath(__file__))
@@ -16,10 +17,10 @@ SETTINGS = {
     "CAPTCHABOT_PRIVATE": False,
 
     # Bot Token (get it from @BotFather)
-    "CAPTCHABOT_TOKEN": "XXXXXXXXX:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+    "CAPTCHABOT_TOKEN": config('BOT_TOKEN', ''),
 
     # Bot Owner (i.e. "@JoseTLG" or "123456789")
-    "CAPTCHABOT_OWNER": "XXXXXXXXX",
+    "CAPTCHABOT_OWNER": "@christianmtr",
 
     # Bot Webhook Host addres (keep in None for Polling or set to a
     # valid address for Webhook)
@@ -53,13 +54,13 @@ SETTINGS = {
     "CAPTCHABOT_F_BAN_GROUPS": SCRIPT_PATH + "/data/bannedgroups.txt",
 
     # Initial language at Bot start
-    "CAPTCHABOT_INIT_LANG": "EN",
+    "CAPTCHABOT_INIT_LANG": "ES",
 
     # Initial enable/disable status at Bot start
     "CAPTCHABOT_INIT_ENABLE": True,
 
     # Initial captcha solve time (in minutes)
-    "CAPTCHABOT_INIT_CAPTCHA_TIME_MIN": 5,
+    "CAPTCHABOT_INIT_CAPTCHA_TIME_MIN": 3,
 
     # Initial captcha difficult level
     "CAPTCHABOT_INIT_CAPTCHA_DIFFICULTY_LEVEL": 2,

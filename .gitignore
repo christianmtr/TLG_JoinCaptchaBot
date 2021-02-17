@@ -5,3 +5,6 @@
 **/*.pyc
 **/*.log
 **/*.ignore
+
+venv/
+.env
