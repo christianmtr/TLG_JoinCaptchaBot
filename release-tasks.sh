@@ -1,1 +1,2 @@
-chmod +x run status sources/kill
+cd sources/
+chmod +x run status kill
